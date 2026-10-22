@@ -63,3 +63,8 @@ Read [Scientific scope](docs/SCIENTIFIC_SCOPE.md) before interpreting outputs fo
 Contributions, issues and corrections are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md), [Roadmap](docs/ROADMAP.md), [Changelog](CHANGELOG.md) and [Security policy](SECURITY.md). The repository contains its own original implementation, separate from upstream [SCONE](https://github.com/tgeijten/scone-core), and does not claim to maintain the upstream solver.
 
 Maintainer: **Dong-Kyun Koo** ([dk-koo](https://github.com/dk-koo)). License: [Apache-2.0](LICENSE). To cite the software, see [CITATION.cff](CITATION.cff). No published adoption metrics or research results are claimed.
+
+## Public maintenance and verification evidence
+
+The [CI workflow](https://github.com/dk-koo/scone-sto-audit/actions/workflows/ci.yml) installs the package and runs its synthetic regression suite plus CLI smoke checks on Linux and Windows with Python 3.10 and 3.12. The [verified four-job run](https://github.com/dk-koo/scone-sto-audit/actions/runs/39743298521) succeeded on 2026-10-22. See [maintenance evidence and limitations](docs/MAINTENANCE_STATUS.md) for traceable scope and current gaps.
+
