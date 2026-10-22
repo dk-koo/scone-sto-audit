@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scone-sto-audit"
+version = "0.2.0"
+description = "Dependency-free validation and sampled-point summaries for existing SCONE/OpenSim STO files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{name = "Dong-Kyun Koo"}]
+keywords = ["SCONE", "OpenSim", "biomechanics", "STO", "reproducibility"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Repository = "https://github.com/dk-koo/scone-sto-audit"
+Issues = "https://github.com/dk-koo/scone-sto-audit/issues"
+
+[project.scripts]
+scone-sto-audit = "scone_sto_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

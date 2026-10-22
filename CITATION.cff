@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite its repository."
+title: "SCONE STO Audit"
+type: software
+authors:
+  - family-names: Koo
+    given-names: Dong-Kyun
+repository-code: "https://github.com/dk-koo/scone-sto-audit"
+license: Apache-2.0
+version: 0.2.0
+date-released: 2026-10-22

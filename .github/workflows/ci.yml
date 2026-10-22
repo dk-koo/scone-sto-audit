@@ -1,0 +1,26 @@
+name: Python package and scientific-guardrail tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unit-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ['3.10', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install source package
+        run: python -m pip install -e .
+      - name: Run all tests
+        run: python -m unittest discover -s tests -v
+      - name: CLI quickstart smoke test
+        run: python -m scone_sto_audit examples/synthetic.sto --columns hip_flexion_r knee_angle_r --start 0.0 --end 0.2
